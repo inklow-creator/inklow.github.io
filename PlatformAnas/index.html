@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <html lang="ar">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- <meta name="description" content="practicing html"> -->
+                    <link rel="stylesheet" href="myself.css">
+                  <!-- <meta http-equiv="refresh" content="3">   -->
+            <title>Anas Platform</title>
+
+<script>
+   
+
+</script>
+
+<style>
+    
+    
+</style>
+</head>
+<body>
+            
+
+    <div class="container">
+                            <!-- الشريط الجانبي -->
+
+        <nav class="sidebar" id="sidebar">
+                                <!-- زر فتح القائمة -->
+                <button class="toggle-sidebar" id="togglebtn">☰</button>
+            <h2>القائمة</h2>
+                <ul>
+                    <li><a href="certificates.html">شهاداتي</a></li>
+                    <hr>
+                    <li><a href="myprojects.html">اعمالي</a></li>
+                    <hr>
+                    <li><a href="digital.html">تواجدي الرقمي</a></li>
+                    <hr>
+                </ul>
+        </nav>
+                                <!-- المحتوى -->
+
+        <main class="main content">
+            <section class="hero">
+                <div class="hero-content">
+
+                    <img src="projects/personal.jpg" alt="photo" class="profile-img">
+                    <h1>اهلا انا انس حقان</h1>
+                    <p>مطور واجهات امامية ومهتم بتجربة المستخدم</p>
+                    <a href="#" class="btn" id="contactbtn">تواصل معي</a>
+                    <a href="#" class="btn" id="cvbtn" >سيرتي الذاتية</a>
+
+                </div>
+             </section>
+        </main>
+    </div>
+                            <!-- مربع التواصل -->
+
+        <div class="modal" id="contactmodal">
+            <div class="modal-content">
+                <span class="close-btn" id="closemodal">&times;</span>
+                <h2>تواصل معي</h2>
+                <p><a href="mailto:anshaqqan@gmail.com"> 📧 EMAIL</a></p>
+                <p><a href="tel:0510029841">📱 PHONE</a></p>
+                <!-- <p> 🔗  </p> -->
+                <!-- <p> 🐙 GITHUB</a></p> -->
+            </div>
+        </div>
+
+                                <!-- مربع السيرة الذاتية  -->
+                <div class="modal" id="cvmodal">
+                    <div class="modal-content">
+                        <span class="close-btn" id="closecvmodal">&times;</span>
+                        <h2>سيرتي الذاتية</h2>
+                        <p>اختر طريقتك لرؤية السيرة الذاتية</p>
+
+                        <!-- زر تحميل الملف -->
+                         <a href="projects/CV.pdf" class="btn" download style="color: blue;">تحميل السيرة الذاتية PDF</a>
+                         <br><br><hr class="hr">
+                         <a href="projects/CV.pdf" class="btn secondry-btn" target="_blank" style="color:rgb(0, 0, 255);">عرض السيرة في تبويب اّخر</a>
+                    </div>
+                </div>        
+
+
+
+
+
+                                <!-- سكربت -->
+    <script>
+        
+
+        const contactbtn = document.getElementById('contactbtn');
+                 contactbtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        });
+
+
+
+        const modal = document.getElementById('contactmodal');
+                 window.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+
+
+         const closebtn = document.getElementById('closemodal');
+                   closebtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+
+
+                    const togglebtn = document.getElementById('togglebtn'); 
+                              togglebtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+
+                    const sidebar = document.getElementById('sidebar'); 
+
+        sidebar.addEventListener('mouseenter', () => {
+            sidebar.classList.add('active');
+        });
+
+        sidebar.addEventListener('mouseleave', () => {
+            if (!togglebtn.classList.contains('opened')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        togglebtn.addEventListener('click', () => {
+            togglebtn.classList.toggle('opened');
+        });
+
+
+            const cvbtn = document.getElementById('cvbtn');
+            const cvmodal = document.getElementById('cvmodal');
+                    cvbtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        cvmodal.style.display = 'flex';
+                    });
+                
+            const closecvmodal = document.getElementById('closecvmodal');
+                            closecvmodal.addEventListener('click', function() {
+                                cvmodal.style.display = 'none';
+                            });
+
+                        window.addEventListener('click', function(e) {
+                            if(e.target === cvmodal) {
+                                cvmodal.style.display = 'none';
+                            }
+                        });
+
+    </script>    
+ </body>          
+ </html>

@@ -1,0 +1,243 @@
+body
+{
+margin: 0px;    
+
+        font-family: Arial, sans-serif;
+
+            direction: rtl;
+}
+
+.container {
+    
+
+    
+}
+
+.sidebar {
+    width: 220px;
+                top: 0px;
+        background-color: #1c1c1c;
+            text-align: center;
+            padding-top: 85px;
+
+                /* position:fixed; */
+
+                    height: 100vh;
+
+                        color: #fff;
+
+                            position: fixed;
+
+                                right: -220px;          /* مخفي برة الشاشة */
+
+                                    transition: right 0.3s ease;
+
+                                        z-index: 1000;
+}
+
+.sidebar:hover {
+    right: 0px;
+}
+
+.toggle-sidebar {
+    position: fixed;
+
+        top: 20px;
+
+            right: 20px;
+
+                z-index: 1000px;
+
+                    background-color: #00c9a7;
+
+                        color: white;
+
+                            border:none;
+
+                                padding: 10px 15px;
+
+                                    border-radius: 10px 15px;
+
+                                        cursor: pointer;
+
+                                            font-size: 20px;
+}
+
+
+.sidebar h2 {
+    
+    font-size: 20px;
+
+            
+        margin-bottom: 20px;
+}
+
+.sidebar ul {
+    
+    list-style:none;
+    background:#243b55;
+        
+        padding: 80px;
+        padding-top: 60px;
+            padding-right: 60px;        
+}
+
+.sidebar ul li {
+    margin: 15px -19px;
+    font-size: 125%;
+    
+    
+}
+hr{
+    background: #00c9a7;
+    padding: 1px;
+    width: 70px;
+    direction: rtl;
+}
+
+.hr {
+    width: 400px;
+}
+.sidebar ul li a {
+    color: #ccc;
+
+        text-decoration: none;
+
+            transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #00c9a7;
+    text-decoration: underline;
+}
+
+.sidebar.active {
+    right: 0px;
+}
+
+.main-content {
+    margin-right: px;
+        
+        flex: 1px;
+
+            background: #f4f4f4;
+}
+
+.hero {
+    height: 100vh;
+
+        background: linear-gradient(to right, #141e30, #243b55);
+
+            color: white;
+
+                display:flex;
+
+                    align-items: center;
+
+                        justify-content: center;
+
+                            text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    
+}
+
+
+.profile-img {
+    width: 250px;
+
+        height: 250px;
+
+            border-radius: 50%;
+
+                margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+
+        margin-top: 20px;
+
+            padding: 10px 25px;
+
+                background: #00c9a7;
+
+                    color: #fff;
+
+                        text-decoration: none;
+
+                            border-radius: 6px;
+
+                                transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #00b294;
+}
+
+.modal {
+    display: none;
+
+        position: fixed;
+
+            z-index: 999;
+
+                right: 0px;
+
+                    left: 0px;
+
+                        top: 0px;
+
+                            bottom: 0px;
+
+                                background-color: rgba(0, 0, 0, 0.6);
+
+                                    align-items: center;
+
+                                        justify-content: center;
+}
+
+.modal-content {
+    background:#03463b;
+        color: #fff;
+            
+        padding: 50px 30px;
+
+            border-radius: 8px;
+
+                width: 90%;
+
+                    max-width: 400px;
+
+                        position: relative;
+
+                            text-align: center;
+
+                                font-size:medium;
+}
+
+.close-btn {
+    position: absolute;
+    
+        top: 10px;
+
+            left: 15px;
+
+                font-size: 22px;
+
+                    cursor: pointer;
+                    
+                        color: #65f705;
+}
+
+.modal-content a {
+    color:#2c76ca;
+
+        text-decoration: none;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
